@@ -1,3 +1,4 @@
+#define _USE_MATH_DEFINES
 #include "Vecteur.h"
 #include <cmath>
 
@@ -13,10 +14,10 @@ void Vecteur::operator-=(Vecteur const& autre)
 	y -= autre.y;
 }
 
-Vecteur Vecteur::operator*=(float coefficient) const
+Vecteur Vecteur::operator*(float coefficient) const
 {
 	return { x * coefficient,y * coefficient };
 }
 Vecteur Vecteur::CreerDepuisAngle(float taille, float angleEnDegre) {
-	return { taille * cos(angleEnDegre / 180.f * M_PI),taille * sin(angleEnDegre / 180.f * M_PI) };
+	return { taille * cos(angleEnDegre / 180.f * static_cast<float>(M_PI)),taille * sin(angleEnDegre / 180.f * static_cast<float>(M_PI)) };
 }
