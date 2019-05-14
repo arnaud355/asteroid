@@ -8,7 +8,7 @@ Vaisseau::Vaisseau(sf::Color const& couleur) {
 	}
 	sprite.setTexture(texture);
 	sprite.setColor(couleur);
-	sprite.setOrigin(sprite.getLocalBounds.width / 2, sprite.getLocalBounds.height / 2);
+	sprite.setOrigin(sprite.getLocalBounds().width / 2, sprite.getLocalBounds().height / 2);
 	sprite.setPosition( 50,50 );
 }
 Vaisseau::~Vaisseau() {
